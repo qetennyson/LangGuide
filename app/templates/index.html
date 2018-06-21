@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <table class="table table-hover">
+    {% for language in languages %}
+
+        <tr>
+            <td width="70px">
+                <h4>{{ language.lang_name }}</h4>
+            </td>
+            <td>
+                <b>Difficulty</b> : {{ language.difficulty }}
+                <br>
+                <b>Common Uses</b> : {{ language.common_uses }}
+            </td>
+        </tr>
+
+    {% endfor %}
+    </table>
+
+{% endblock %}
