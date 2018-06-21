@@ -1,1 +1,1 @@
-web:gunicorn pbp_main:app
+web:gunicorn app:app
