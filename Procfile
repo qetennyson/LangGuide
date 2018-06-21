@@ -1,1 +1,1 @@
-web:gunicorn app:app heroku ps:scales web=1
+web:gunicorn app:app
