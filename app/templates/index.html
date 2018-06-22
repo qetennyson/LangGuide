@@ -13,9 +13,22 @@
         font-size: 20px;
         padding: 6px 20px 6px 20px;
     }
+    #dataScienceBtn {
+        font-family: Garamond;
+        font-size: 20px;
+        color: #191919;
+        padding 6px 20px 6px 20px;
+        background-color: white;
+    }
+    #filterContainer {
+        margin-top: -10px;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
 </style>
 
-    <div class="intro_body text-center" style="margin:auto;">
+    <div class="intro_body text-center" style="margin: 0 auto;">
         <h1><b>why use this?</b></h1>
         <p style="font-size: 24px; margin-left: 20px; margin-right:20px">You're a new programmer.  You're inspired to do something new.
             <br>The last thing you want to do is spend a week choosing a language.
@@ -23,6 +36,16 @@
         In the words of Tim Peters:
         <em>Now is better than never.</em></p>
         <hr>
+    </div>
+
+    <div class="container text-center" id="filterContainer" style="margin: 0 auto;">
+        <h3><b>Filters</b></h3>
+        <a class="btn btn-primary" id="dataScienceBtn">Data Science</a>
+        <a class="btn btn-primary" id="dataScienceBtn">Web Apps</a>
+        <a class="btn btn-primary" id="dataScienceBtn">Mobile Apps</a>
+        <a class="btn btn-primary" id="dataScienceBtn">Full Stack</a>
+        <hr>
+
     </div>
 
 
@@ -34,7 +57,8 @@
                 <h1 class="card-title">{{ language.lang_name }}</h1>
                 <h3> Difficulty: <b>{{ language.difficulty }}</b> </h3><br>
                 <h5 style="font-size: 20px"> <b>Common Uses:</b> {{ language.common_uses|join(', ') }}</h5>
-                <p><a class="btn btn-primary" id="infoButton" data-toggle="collapse" data-target="#language_body_{{ language.id }}"
+                <p><a class="btn btn-primary" id="infoButton" data-toggle="collapse"
+                      data-target="#language_body_{{ language.id }}"
                       role="button" aria-expanded="false" aria-controls="language_body_{{ language.id }}"> info
 
                 </a></p>
