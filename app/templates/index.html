@@ -2,38 +2,32 @@
 
 {% block content %}
 
-    <h2>lqr - explained</h2>
-    <p>You're a new programmer.  You're inspired to do something new.
-    The last thing you want to do is spend a week choosing a language.
-    <br><br>
-    In the words of Tim Peters:
-    <em>Now is better than never.</em></p>
-    <hr>
+    <div class="intro_body text-center" style="margin-left: 20px">
+        <h2>why use this?</h2>
+        <p>You're a new programmer.  You're inspired to do something new.
+        The last thing you want to do is spend a week choosing a language.
+        <br><br>
+        In the words of Tim Peters:
+        <em>Now is better than never.</em></p>
+        <hr>
+    </div>
 
-    <div class="row">
 
-    {% for language in languages %}
-
-        <div class="col-sm-4">
-                <div class="card border-dark mb-3" style="max-width:18rem;">
-                    <div class="card-header">{{ language.lang_name }}</div>
-                    <div class="card-body text-dark">
-                        <p class="title"><b>Difficulty:</b> {{ language.difficulty }}
-                        <br>
-                        <b>{{ language.common_uses|join(' ') }}</b></p>
-                        <a href="/" class="btn btn-primary">More Data Soon</a>
-                    </div>
-                </div>
+    <div class="row " style="max-width: 900px; margin:auto;">
+        {% for language in languages %}
+        <div class="col-sm-4" style="width: 28rem;">
+            <div class="card border-light mb-3 text-center">
+            <div class="card-block">
+                <h2 class="card-title">{{ language.lang_name }}</h2>
+                <h4> Difficulty: <b>{{ language.difficulty }}</b> </h4><br>
+                <h5 style="font-size: 16px"> Common Uses: {{ language.common_uses|join(', ') }}</h5></p>
+            </div>
         </div>
-        <br>
-        {% if forloop.counter | divisibleby:"3" and not forloop.last %}
-        </div><div class="row">
+        </div>
+        {% if loop.index == 3 and not loop.last %}
+        </div><div class="row" style="max-width: 900px; margin:auto;">
         {% endif %}
 
     {% endfor %}
     </div>
-
-
-
-
 {% endblock %}
