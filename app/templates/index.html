@@ -25,11 +25,24 @@
         {% for language in languages %}
         <div class="col-sm-4">
             <div class="card text-center">
-            <div class="card-block border-light mb-3" style="margin-bottom: 10px;">
+            <div class="card-block" style="margin-bottom: 10px;">
                 <h1 class="card-title">{{ language.lang_name }}</h1>
                 <h3> Difficulty: <b>{{ language.difficulty }}</b> </h3><br>
-                <h5 style="font-size: 20px"> <b>Common Uses:</b> {{ language.common_uses|join(', ') }}</h5></p>
+                <h5 style="font-size: 20px"> <b>Common Uses:</b> {{ language.common_uses|join(', ') }}</h5>
+                <p><a class="btn btn-primary" data-toggle="collapse" href="#collapseExample"
+                      role="button" aria-expanded="false" aria-controls="collapseExample">
+
+                </a></p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        Bacon ipsum dolor amet ham hock beef alcatra meatball kevin.
+                        Kielbasa shoulder filet mignon cow tongue tail shank boudin.
+                        Tenderloin shankle boudin spare ribs beef ribs, beef cupim shoulder
+                        kevin burgdoggen corned beef meatloaf pork loin.
+                    </div>
+                </div>
             </div>
+
                 <hr>
         </div>
         </div>
