@@ -21,9 +21,9 @@
     </div>
 
 
-    <div class="row " style="max-width: 900px; margin:auto;">
+    <div class="row " style="max-width: 900px; margin: 0 auto;">
         {% for language in languages %}
-        <div class="col-sm-4" style="width: 28rem;">
+        <div class="col-sm-4">
             <div class="card text-center">
             <div class="card-block border-light mb-3" style="margin-bottom: 10px;">
                 <h1 class="card-title">{{ language.lang_name }}</h1>
@@ -34,7 +34,7 @@
         </div>
         </div>
         {% if loop.index == 3 and not loop.last %}
-        </div><div class="row" style="max-width: 900px; margin:auto;">
+        </div><div class="row" style="max-width: 900px; margin: 0 auto;">
         {% endif %}
 
     {% endfor %}
