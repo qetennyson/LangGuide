@@ -24,12 +24,13 @@
     <div class="row " style="max-width: 900px; margin:auto;">
         {% for language in languages %}
         <div class="col-sm-4" style="width: 28rem;">
-            <div class="card border-light mb-3 text-center">
-            <div class="card-block">
+            <div class="card text-center">
+            <div class="card-block border-light mb-3" style="margin-bottom: 10px;">
                 <h1 class="card-title">{{ language.lang_name }}</h1>
                 <h3> Difficulty: <b>{{ language.difficulty }}</b> </h3><br>
-                <h5 style="font-size: 20px"> Common Uses: {{ language.common_uses|join(', ') }}</h5></p>
+                <h5 style="font-size: 20px"> <b>Common Uses:</b> {{ language.common_uses|join(', ') }}</h5></p>
             </div>
+                <hr>
         </div>
         </div>
         {% if loop.index == 3 and not loop.last %}

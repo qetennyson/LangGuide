@@ -8,7 +8,7 @@ def index():
         {
             'lang_name': 'Python',
             'difficulty': '2',
-            'common_uses': ['Data Science', 'Finance', 'Web Applications', 'Infrastructure'],
+            'common_uses': ['Data Science', 'Finance', 'Web Applications'],
             'image': 'app/static/images/python.png'
         },
         {
