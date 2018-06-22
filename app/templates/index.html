@@ -1,11 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
+<style>
+    h1, h2, h3, h4, h5 {
+        font-family: Garamond;
+    }
+    p, em {
+        font-family: Garamond;
+    }
+</style>
 
-    <div class="intro_body text-center" style="margin-left: 20px">
-        <h2>why use this?</h2>
-        <p>You're a new programmer.  You're inspired to do something new.
-        The last thing you want to do is spend a week choosing a language.
+    <div class="intro_body text-center" style="margin:auto;">
+        <h1><b>why use this?</b></h1>
+        <p style="font-size: 24px; margin-left: 20px; margin-right:20px">You're a new programmer.  You're inspired to do something new.
+            <br>The last thing you want to do is spend a week choosing a language.
         <br><br>
         In the words of Tim Peters:
         <em>Now is better than never.</em></p>
@@ -18,9 +26,9 @@
         <div class="col-sm-4" style="width: 28rem;">
             <div class="card border-light mb-3 text-center">
             <div class="card-block">
-                <h2 class="card-title">{{ language.lang_name }}</h2>
-                <h4> Difficulty: <b>{{ language.difficulty }}</b> </h4><br>
-                <h5 style="font-size: 16px"> Common Uses: {{ language.common_uses|join(', ') }}</h5></p>
+                <h1 class="card-title">{{ language.lang_name }}</h1>
+                <h3> Difficulty: <b>{{ language.difficulty }}</b> </h3><br>
+                <h5 style="font-size: 20px"> Common Uses: {{ language.common_uses|join(', ') }}</h5></p>
             </div>
         </div>
         </div>
