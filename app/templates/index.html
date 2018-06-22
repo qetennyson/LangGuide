@@ -9,7 +9,7 @@
         font-family: Garamond;
     }
     #infoButton {
-        font-family: Garamond;
+        font-family: Helvetica;
         font-size: 20px;
         padding: 6px 20px 6px 20px;
     }
@@ -33,7 +33,7 @@
         <p style="font-size: 24px; margin-left: 20px; margin-right:20px">You're a new programmer.  You're inspired to do something new.
             <br>The last thing you want to do is spend a week choosing a language.
         <br><br>
-        In the words of Tim Peters:
+        In the words of Python's legendary Tim Peters:
         <em>Now is better than never.</em></p>
         <hr>
     </div>
@@ -63,11 +63,28 @@
 
                 </a></p>
                 <div class="collapse" id="language_body_{{ language.id }}">
-                    <div class="card card-body">
-                        Bacon ipsum dolor amet ham hock beef alcatra meatball kevin.
-                        Kielbasa shoulder filet mignon cow tongue tail shank boudin.
-                        Tenderloin shankle boudin spare ribs beef ribs, beef cupim shoulder
-                        kevin burgdoggen corned beef meatloaf pork loin.
+                    <div class="card card-body" style="text-align: left">
+                        {{ language.diff_expanded }}
+                        <br>
+                        <br>
+                        <b>Environment Requirements</b>
+                            <br>
+                            {{ language.requirements }}
+                        <br>
+                        <br>
+                        <b>Certifications</b>
+                            <br>
+                        {{ language.certifications }}
+                        <br>
+                        <br>
+                        <b>Libraries</b>
+                            <br>
+                        {{ language.libraries }}
+                        <br>
+                        <br>
+                        <b>Popular Apps</b>
+                            <br>
+                        {{ language.pop_apps }}
                     </div>
                 </div>
             </div>
