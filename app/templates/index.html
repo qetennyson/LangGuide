@@ -25,11 +25,16 @@
         margin-bottom: 10px;
         font-size: 30px;
     }
+    body {
+        background-color: #fcffff;
+    }
+
+
 
 </style>
 
     <div class="intro_body text-center" style="margin: 0 auto;">
-        <h1><b>why use this?</b></h1>
+        <h1><b>hi there</b></h1>
         <p style="font-size: 24px; margin-left: 20px; margin-right:20px">You're a new programmer.  You're inspired to do something new.
             <br>The last thing you want to do is spend a week choosing a language.
         <br><br>
@@ -39,7 +44,7 @@
     </div>
 
     <div class="container text-center" id="filterContainer" style="margin: 0 auto;">
-        <h3><b>Filters</b></h3>
+        <h3><b>Filters (not working yet :D)</b></h3>
         <a class="btn btn-primary" id="dataScienceBtn">Data Science</a>
         <a class="btn btn-primary" id="dataScienceBtn">Web Apps</a>
         <a class="btn btn-primary" id="dataScienceBtn">Mobile Apps</a>
@@ -54,8 +59,8 @@
         <div class="col-sm-4" id="language_{{ language.id }}">
             <div class="card text-center">
             <div class="card-block" style="margin-bottom: 10px;">
-                <h1 class="card-title">{{ language.lang_name }}</h1>
-                <h3> Difficulty: <b>{{ language.difficulty }}</b> </h3><br>
+                <h1 class="card-title"><b>{{ language.lang_name }}</b></h1>
+                <h3> <b>Difficulty: </b>{{ language.difficulty }} </h3><br>
                 <h5 style="font-size: 20px"> <b>Common Uses:</b> {{ language.common_uses|join(', ') }}</h5>
                 <p><a class="btn btn-primary" id="infoButton" data-toggle="collapse"
                       data-target="#language_body_{{ language.id }}"
@@ -63,8 +68,8 @@
 
                 </a></p>
                 <div class="collapse" id="language_body_{{ language.id }}">
-                    <div class="card card-body" style="text-align: left">
-                        {{ language.diff_expanded }}
+                    <div class="card card-body" id="description" style="text-align: left">
+                        <p style="font-size:18px; font-family:Helvetica">{{ language.diff_expanded }}
                         <br>
                         <br>
                         <b>Environment Requirements</b>
@@ -85,6 +90,7 @@
                         <b>Popular Apps</b>
                             <br>
                         {{ language.pop_apps }}
+                        </p>
                     </div>
                 </div>
             </div>

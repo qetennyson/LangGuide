@@ -23,7 +23,7 @@ def index():
             'id': 2,
             'lang_name': 'JavaScript',
             'difficulty': '2',
-            'common_uses': ['Web Applications'],
+            'common_uses': ['Web Applications', 'Scripting'],
             'image': 'app/static/images/javascript.png',
             'diff_expanded': langDict.javascript['difficulty'],
             'requirements': langDict.javascript['requirements'],
